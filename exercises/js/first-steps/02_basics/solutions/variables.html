@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Variables</h2>
+
+<script type="text/javascript">
+
+var x = '1';  // string value
+var y = 1;    // integer value
+
+// 1. exercise
+if(x == y){
+  console.log("it's the same 1");
+}
+if(x === y){ // NO! it's not the same, string != integer
+  console.log("it's the same 2");
+}
+
+// 2. exercise
+var price = 1.99;
+var amount = 3;
+amount += 7;
+/*
+	take care about how to handle strings and calculation
+	[] will be this the same like console.log below? => amount + " apples costs " + price * amount
+*/
+console.log(amount + " apples costs " + (price * amount))
+//alert(amount + " apples costs " + (price * amount));
+
+// 3. exercise
+amount = prompt("how many apples?");
+var total = price * amount;
+var msg = amount + " apples costs " + total;
+alert(msg);
+
+</script>
+</body>
+</html>

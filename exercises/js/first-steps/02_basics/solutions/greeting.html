@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h2>Greetings</h2>
+
+<button type="button" onclick="doGreeting();">Say ...!</button>
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var min = 0;
+var max = 3;
+var username;
+
+/*
+	"simple" implementation with knowledge about
+	- random number generator
+	- switch / case -> also possible with if/else
+	- functions
+*/
+function doGreeting() {
+  var rndNumber = Math.random() * (max - min + 1);
+  rndNumber = Math.floor(rndNumber) + min;
+
+  var msg;
+   switch(rndNumber){
+    case 1:
+     msg = "Hello";
+     break;
+    case 2:
+     msg = "Welcome";
+     break;
+    case 3:
+     msg = "Ciao";
+     break;
+    default:
+     msg= "Servus";
+   }
+
+   msg += " " + username;
+
+   //alert(msg);
+   document.getElementById('demo').innerHTML += msg + "<br/>";
+   console.log(msg);
+}
+
+// extensions with simple user interaction, to ask users name and will personalized messages
+username = prompt("What's your name?");
+
+/*
+	Take a look in the web console
+	[] what happens with outputs?
+	[] try to analyse and compare with browser output?
+	[] are there any differences? -> 'message counter'
+*/
+for(var i = 0; i < 20; i++){
+  doGreeting();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Error Script</h1>
+
+<h2>Why a JavaScript Error happens?</h2>
+
+<script>
+  document.getElementById('demo').innerHTML = Date();
+  /*
+	Think about:
+	[] why there is happen an error, not visible on the browser, but in the web console?
+	[] How a website is loading? How the browser is reading any webpage?
+	
+  */
+</script>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()"> Click me to display Date and Time.</button>
+<p id="demo"></p>
+
+<script>
+  document.getElementById('demo').innerHTML = Date();
+</script>
+
+</body>
+
+</html>

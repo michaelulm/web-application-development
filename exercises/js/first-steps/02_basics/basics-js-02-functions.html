@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="./js/randomNumber.js" ></script>
+</head>
+<body>
+
+<h2>WebAppDev Lottery</h2>
+
+<script type="text/javascript">
+
+	function getWinningNumber(){
+		var winningNumber = getRndInteger(1, 45);
+		document.getElementById('demo').innerHTML = "The winning number is " + winningNumber;
+	}
+	/*
+	https://www.w3schools.com/js/
+	extend the Lottery
+	
+	TODO
+	[] ask the user for personal winning number, e.g. my Number could be 4, and output this number too in a new HTML element
+	[] compare random number and user's number, if it's a match, output "You have won the lottery!"
+	[] generate 6 random numbers and output them, compare only the one users number to all generated numbers, it's not necessary to ask user for 
+	
+	*/
+</script>
+
+<button type="button" onclick="getWinningNumber();">Get Winning Number!</button>
+<p id="demo"></p>
+
+
+</body>
+</html> 

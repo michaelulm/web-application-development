@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Variables</h2>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var myName; // value undefinied
+console.log(myName);
+
+myName = "No Body"; // assign value
+console.log(myName);
+
+var age = 42;
+console.log(age);
+
+var pi = 3.14;
+console.log(pi);
+
+var person = myName;
+console.log(person);
+
+var answer = 'Yes I am!';
+console.log(answer);
+
+myName = "No" + " " + "Body"; // concating strings
+console.log(myName);
+
+myName = prompt("What's your name?");
+alert("Nice to see you " + myName);
+
+alert(myName + ", please now inspect the webpage and try out some other basic examples");
+
+document.getElementById('demo').innerHTML = 'Have you read the popups? No? please reload the page again, ' + myName + "!";
+
+/*
+	https://www.w3schools.com/js/js_operators.asp
+	
+	TODO
+	[] create two variables with '1' and 1, compare those two varibles and output it's not the same (if comparison is false!)
+	[] create two variables with 1.99 and 3 (price and amount), increment the amount with 7, multiply both variables, create a popup with the total price "10 apples costs 19.90", use your created variable for output
+	[] ask for how many apples, use this number to calculate the total price
+*/
+
+</script>
+</body>
+</html> 
