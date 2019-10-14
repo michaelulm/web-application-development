@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page for Web Application Development</title>
+    <!--    Use external scripts-->
+    <script src="./js/page-loaded.js"></script>
+    <script type="text/javascript">
+        console.log(" === page is loading === ");
+        console.log("Current loaded HTML 2");
+        console.log(document.children[0].innerHTML);
+        alert('page is loading 2');
+    </script>
+
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    // space at body start
+    function templateFunction() {
+        console.log(" === onclick === ");
+        console.log("Current loaded HTML by click");
+        console.log(document.children[0].innerHTML);
+    }
+
+</script>
+
+<h1>Page Loading</h1>
+<p id="demo">Inspect with browser, change to web console and reload page. Take a look on web console.</p>
+<p>Browser reads line by line, and will run code immediately after reading.</p>
+
+<script type="text/javascript">
+    // space at body end
+    console.log(" === page is loading === ");
+    console.log("Current loaded HTML 3");
+    console.log(document.children[0].innerHTML);
+    alert('page is loading 3');
+</script>
+</body>
+</html>
