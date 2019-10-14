@@ -14,4 +14,7 @@ window.addEventListener("load", function(){
     console.log();
     console.log("document variable");
     console.log(document);
+    console.log(document.children[0].innerHTML)
 });
+
+console.log("demo output");
