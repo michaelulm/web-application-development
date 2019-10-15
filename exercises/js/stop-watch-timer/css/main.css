@@ -1,0 +1,26 @@
+body{
+    font-size: larger;
+}
+
+label {
+    width:120px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+input {
+    width:100px;
+}
+
+span,input {
+    margin: 5px;
+}
+
+.number,.delimiter{
+    font-size: xx-large;
+}
+
+button, input {
+
+    font-size: large;
+}

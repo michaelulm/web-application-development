@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stop Watch and Timer for Web Application Development</title>
+    <!--    Use external scripts -->
+<!--    <script src="./js/main.js"></script>-->
+    <!--    Use external CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- defines charset -->
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+
+<h1>Stop Watch and Timer for Web Application Development</h1>
+<div id="stop-watch">
+
+    <h2>Stop Watch</h2>
+
+    <div>
+        <span class="number" id="hour">00</span><span class="delimiter">:</span>
+        <span class="number" id="minute">1</span><span class="delimiter">:</span>
+        <span class="number" id="seconds">49</span><span class="delimiter">.</span>
+        <span class="number" id="milliseconds">684</span>
+    </div>
+
+    <button id="btnStart">start</button>
+    <button id="btnStop">stop</button>
+    <button id="btnReset">reset</button>
+
+    <div id="results-stop-watch">
+    </div>
+</div>
+<div id="timer">
+
+    <h2>Timer</h2>
+
+    <div>
+        <input type="text" id="time-to-run" name="time-to-run" class="number" placeholder="55sec" />
+
+        <div id="running-time" name="running-time" class="number"></div>
+    </div>
+
+    <button id="btnStartTime">start</button>
+
+    <div id="results-timer">31 seconds left!
+    </div>
+
+</div>
+
+
+</body>
+</html>

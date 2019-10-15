@@ -26,6 +26,13 @@ window.addEventListener("load", function(){
     //      add current time to new list item https://www.w3schools.com/js/js_date_methods.as
 
 
+    // DIFFICULT
+    // [] add a HTML table with all BMI categories (only one gender) https://www.issgesund.at/gesundessen/ernaehrungstips/dembodymassindexaufderspur.html
+    //      highlight calculated category for user
+    // [] extend this HTML table with BOTH genders
+    //      select gender by separated input field (see EASY Task)
+
+
     // OPTIONAL / EXTENDED
     // [] replace current results div with e.g. a table and add rows and columns (height, weight, bmi)
 	// [] accept different inputs and do a correct calculation
