@@ -15,11 +15,11 @@ window.addEventListener("load", function(){
 
 
     // EASY
-    // [] add another input field to ask user for his/her gender
     // [] do not overwrite latest value, extend existing values with current values, create a history of your calculations
 
 
     // MEDIUM
+    // [] add another input field to ask user for his/her gender
     // [] accept following inputs e.g. 1,82 or 1.82 or 1,82m
     //      use replace, parseFloat, parseInt, ... methods to improve easy handling of BMI calculator
     // [] replace current results div with e.g. <ul> and add new list items to this list when you calculate BMI
@@ -30,7 +30,7 @@ window.addEventListener("load", function(){
     // [] add a HTML table with all BMI categories (only one gender) https://www.issgesund.at/gesundessen/ernaehrungstips/dembodymassindexaufderspur.html
     //      highlight calculated category for user
     // [] extend this HTML table with BOTH genders
-    //      select gender by separated input field (see EASY Task)
+    //      select gender by separated input field (see MEDIUM Task)
 
 
     // OPTIONAL / EXTENDED
