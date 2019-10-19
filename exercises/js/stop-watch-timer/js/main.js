@@ -27,12 +27,20 @@ window.addEventListener("load", function(){
     var runningtime =  setInterval(function(){
         timeleft--;
         document.getElementById("results-timer").innerHTML = timeleft;
-        document.getElementById("btnStartTime").hidden = "hidden";
 
-        // delete runningtime interval demo, e.g. if timer has finished
-        clearInterval(runningtime);
+        // Demo to hide a HTML Element
+        document.getElementById("btnStartTime").hidden = "hidden";
     }, timeout);
 
+
+    setTimeout(function() {
+        // Demo to hide a HTML Element
+        document.getElementById("btnStartTime").hidden = "";
+
+        // delete runningtime interval demo, e.g. if timer has finished,
+        // in this example, delete interval after x seconds of set timeout
+        clearInterval(runningtime);
+    }, 10000);
 
     // implement following TODO Lists
 
@@ -68,5 +76,4 @@ window.addEventListener("load", function(){
     //          "Heidi 00:02:23.351"
     //          ...
     //      after the last button click (person click) the stop watch will be stopped
-    // [] timer
 });
