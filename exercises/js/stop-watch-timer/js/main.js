@@ -76,4 +76,5 @@ window.addEventListener("load", function(){
     //          "Heidi 00:02:23.351"
     //          ...
     //      after the last button click (person click) the stop watch will be stopped
+    // [] stop watch: do a refactoring after some experience
 });
