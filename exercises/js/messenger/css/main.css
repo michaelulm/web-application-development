@@ -1,0 +1,21 @@
+body{
+    font-size: larger;
+}
+
+textarea{
+    display:block;
+    width: 300px;
+}
+
+#output{
+    height: 100px;
+}
+
+span,input {
+    margin: 5px;
+}
+
+button, input, textarea {
+    font-size: large;
+    margin: 10px;
+}
