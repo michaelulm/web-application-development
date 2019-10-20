@@ -1,6 +1,6 @@
 "use strict"; // use strict mode in this script
 
-// ... add global variables
+// more details at https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 
 // loads after window / page is fully loaded
 window.addEventListener("load", function(){
@@ -12,11 +12,18 @@ window.addEventListener("load", function(){
     function ajaxCallback(){
         console.log(this); // take a look on the readyState property (!)
 
-        if(this.readyState == 4     // fully loaded
+        if(this.readyState == 4     // operation is complete
             && this.status == 200   // successful request/response
         ){
             // directly write response to HTML element
             document.getElementById("demo").innerHTML = this.responseText;
+
+            // replace line breaks with <br> tags
+            var output = this.responseText;
+            do {
+                output = output.replace("\n", "<br/>");
+            }while(output.includes("\n"));
+            document.getElementById("demo").innerHTML = output;
         }
     }
 
