@@ -4,6 +4,39 @@
 window.addEventListener("load", function(){
     console.log(" === page ready ===");
 
+    // first steps described with AJAX process steps 1-3
+
+    // AJAX process step 3
+    function callback(){
+        console.log("=== AJAX callback ===");
+        // check response
+
+        // handle response
+
+        // do something, e.g. clear input field
+    }
+
+    // AJAX process step 2
+    function loadData(){
+        console.log("=== AJAX request data ===");
+
+        // load value from textarea -> userInput
+
+        // XHR Object init
+
+        // set URL with parameter 'userid' and 'msg'
+
+        // set callback function to XHR -> callback()
+
+        // send XHR
+
+    }
+
+    // AJAX process step 1
+    // add eventlister for button click -> loadData
+
+
+
     // implement following TODO Lists
 
     // STARTER
@@ -53,4 +86,9 @@ window.addEventListener("load", function(){
             Text haha
              > simple Messenger Demo
      */
+
+    // [] try to create a simple chat for two users
+    //      add an input field where you add another userid
+    //      receive every 15 seconds new messages from other user(s)
+    //      if receiving other user messages works fine, extend your add user function to store more than one user
 });
