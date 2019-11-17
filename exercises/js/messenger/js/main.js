@@ -1,40 +1,57 @@
 "use strict"; // use strict mode in this script
 
+var userid = 5; // my user id for demonstration
+
 // loads after window / page is fully loaded
 window.addEventListener("load", function(){
     console.log(" === page ready ===");
 
-    // first steps described with AJAX process steps 1-3
+    // TODO
 
-    // AJAX process step 3
+    // user id -> get from external URL
+
+
+
+
+    // callack function
+
     function callback(){
-        console.log("=== AJAX callback ===");
-        // check response
-
-        // handle response
-
-        // do something, e.g. clear input field
+        console.log(this);
+        if(this.readyState == 4 && this.status == 200){
+            //alert("successful transmitted message");
+            document.getElementById("message").value = "";
+        }
     }
 
-    // AJAX process step 2
+    // function for button click
     function loadData(){
-        console.log("=== AJAX request data ===");
+        console.log("=== button click successful ===");
+        // read message from message box
+        var userInput = document.getElementById("message").value;
+        console.log(userInput);
 
-        // load value from textarea -> userInput
+        userInput = encodeURI(userInput);
+        console.log(userInput);
 
         // XHR Object init
+        var ajaxObject = new XMLHttpRequest();
+        var ajaxURL = "https://www.sandbox.co.at/msd/webappdev/addMessage.php?userid="+userid+"&msg="+userInput;
+        console.log(ajaxURL);
 
-        // set URL with parameter 'userid' and 'msg'
+        // set callback function
+        ajaxObject.onreadystatechange = callback;
 
-        // set callback function to XHR -> callback()
+        // set URL for send message
+        ajaxObject.open("GET", ajaxURL, true);
 
-        // send XHR
+        // send request with XHR object
+        ajaxObject.send();
 
     }
 
-    // AJAX process step 1
-    // add eventlister for button click -> loadData
 
+    // button click
+    document.getElementById("btnSend").addEventListener("click", loadData);
 
 
     // implement following TODO Lists

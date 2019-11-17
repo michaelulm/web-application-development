@@ -10,7 +10,8 @@ window.addEventListener("load", function(){
 
     // we need a callback function, which will be loaded on ready state changes
     function ajaxCallback(){
-        console.log(this); // take a look on the readyState property (!)
+        console.log("callback");
+        // console.log(this); // take a look on the readyState property (!)
 
         if(this.readyState == 4     // operation is complete
             && this.status == 200   // successful request/response
@@ -32,12 +33,20 @@ window.addEventListener("load", function(){
             document.getElementById("demo").innerHTML = output;
 
         }
+
+
+        if(this.readyState == 4     // operation is complete
+            && this.status == 404   // successful request/response
+        ){
+            document.getElementById("demo").innerHTML = "File Not Found";
+
+        }
     }
 
     // load function to create first AJAX Request
     function loadData(){
         var ajaxObject = new XMLHttpRequest();
-        var ajaxURL = "https://raw.githubusercontent.com/michaelulm/web-application-development/master/exercises/js/first-steps/04_ajax/data/simple.txt";
+        var ajaxURL = "data/simple.txt";
 
         // trigger function on every change of readystate
         ajaxObject.onreadystatechange = ajaxCallback;
@@ -45,6 +54,7 @@ window.addEventListener("load", function(){
         // set true to load asynchronous
         ajaxObject.open("GET", ajaxURL, true);
         ajaxObject.send();
+        console.log("request sent")
     }
 
     document.getElementById("btnAjaxLoad").addEventListener("click", loadData);
