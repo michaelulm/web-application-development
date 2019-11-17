@@ -1,2 +1,4 @@
-/.idea
+.idea/
+node_modules/
 /exercises/php/inc/config.php
+
