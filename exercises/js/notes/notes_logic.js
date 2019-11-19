@@ -1,14 +1,7 @@
-// required for FileSystem IOs
-const fs = require('fs');
-
 // deletes current note from temporary data source
 function deleteNote(notes, id) {
   const index = notes.findIndex(note => note.id === parseInt(id));
   notes.splice(index, 1); // removes current data entry
-
-  // store to JSON File
-  saveToFile(notes);
-
   return notes;
 }
 
@@ -31,17 +24,7 @@ function saveNote(notes, note) {
     note.id = nextId;
     notes.push(note);
   }
-
-  // store to JSON File
-  saveToFile(notes);
-
   return notes;
-}
-
-// will write current Notes to json file for persistence data
-function saveToFile(notes){
-  let data = JSON.stringify(notes);
-  fs.writeFileSync('notes.json', data);
 }
 
 module.exports = {

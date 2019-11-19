@@ -1,26 +1,31 @@
 const http = require('http');
-
-// laod fs module to get access to local files
 const fs = require('fs');
 
-// load special "notes" modules
+// load special "notes" modules, self implemented modules
+
+// initialize data, which could be from different data sources, e.g. json file or database (different versions available)
 let notes = require('./notes_data');
+
+// core logic with delete and save new/edited notes
 const notesLogic = require('./notes_logic'); // will export multiple functions
 const deleteNote = notesLogic.deleteNote;
 const saveNote = notesLogic.saveNote;
+
+// creates Overview List with HTML
 const getList = require('./notes_list'); // will only export single function
 const getForm = require('./notes_form');
 
-// load additional module
+// load additional module formidable, A Node.js module for parsing form data
+// more details at https://www.npmjs.com/package/formidable
 const formidable = require('formidable');
 
-
+// entry point for each Request to create matching response
 const server = http.createServer((request, response) => {
   // get current url for navigation through web application
   const parts = request.url.split('/');
 
   // delete method to remove current note
-  if (parts.includes('delete')) {
+  if (parts.includes('delete')) { // -> localhost:8080/delete/42 -> parts[0] = localhost:8080 parts[1] = delete, parts[2] = 42
     notes = deleteNote(notes, parts[2]);
     redirect(response, '/');
 

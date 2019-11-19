@@ -10,7 +10,7 @@ function getList(notes) {
             <link rel="stylesheet" href="/styles/style.css" />
         </head>
         <body>
-            <h1>Notes</h1>
+            <h1>Notes Overview</h1>
             <table>
                 <tr>
                 <th>id</th><th>Note</th><th colspan="2">actions</th>
@@ -24,6 +24,7 @@ function getList(notes) {
     </html>`;
 }
 
+// how array map works https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 // create each row with TR and TD Elements
 function createRow(note) {
 
