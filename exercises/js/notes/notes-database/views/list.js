@@ -2,6 +2,9 @@
 // creates and returns complete overview page with HTML and CSS reference
 function getList(notes) {
 
+    console.log("getList")
+    console.log(notes);
+
     return `<!DOCTYPE html>
     <html>
         <head>

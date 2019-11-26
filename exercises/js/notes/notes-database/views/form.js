@@ -1,17 +1,18 @@
-function getForm(notes, id) {
+function getForm(note) {
 
-    // prepare empty note
-    let note = {
-        id: '',
-        note: ''
-    };
+    if(note == undefined){
+        note = {
+            id: '',
+            note: ''
+        };
+    }
 
     // define different header(s)
     let noteHeader = "Add new note";
 
     // check if note alredy exists and fill note object
-    if (id) {
-        note = notes.find(nte => nte.id === parseInt(id));
+    if (note.id) {
+        // note = notes.find(nte => nte.id === parseInt(id));
         noteHeader = "Edit note";
     }
 
