@@ -1,0 +1,26 @@
+body{
+    font-size: larger;
+}
+
+label {
+    width:120px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+input {
+    width:200px;
+}
+
+div {
+    margin: 10px;
+}
+
+button, input {
+
+    font-size: large;
+}
+
+.error{
+    display:none;
+}
