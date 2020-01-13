@@ -9,11 +9,13 @@ function send(response, responseBody) {
 // send all other static files to client
 function sendFile(response, request, encoding = '', filename = '', download = false){
     if(filename == '')
-        filename = request.url;
+        fn = request.url;
+    else
+        fn = "/" + filename;
 
     console.log("send file " + filename);
 
-    fs.readFile(__dirname + filename, encoding, function (err, data) {
+    fs.readFile(__dirname + fn, encoding, function (err, data) {
         if (err) {
             console.log(err);
             response.statusCode = 404;
@@ -22,7 +24,7 @@ function sendFile(response, request, encoding = '', filename = '', download = fa
 
             // write different header information for force download file at requesting e.g. export
             if(download){
-                response.writeHead(200, {'Content-disposition': 'attachment; filename=export.csv'}); // to specify filename for download
+                response.writeHead(200, {'Content-disposition': 'attachment; filename=' + filename}); // to specify filename for download
             }
 
             response.end(data);
