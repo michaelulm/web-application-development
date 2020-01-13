@@ -17,6 +17,12 @@ const getForm = require('./views/form');
 // more details at https://www.npmjs.com/package/formidable
 const formidable = require('formidable');
 
+// CSV export with https://www.npmjs.com/package/fast-csv
+// load additional module fast-csv, a Node.js module for exporting stored data to CSV
+const fastcsv = require("fast-csv");
+const fs = require("fs");
+
+
 // entry point for each Request to create matching response
 const server = http.createServer((request, response) => {
   // get current url for navigation through web application
@@ -76,7 +82,33 @@ const server = http.createServer((request, response) => {
   } else if (request.url === '/styles/style.css') {
     sendFile(response, request, 'utf8');
 
-    // standard request case, show list view
+    // export data to file
+  } else if (parts.includes('export')) {
+
+      // load all data, only load selected data would also be possible
+      model.getAll().then(
+          notes => {
+              ws = fs.createWriteStream("export.csv");
+
+              const jsonData = JSON.parse(JSON.stringify(notes));
+              console.log("jsonData", jsonData);
+
+              ws.on('finish', function(){
+                      console.log("finished");
+                      sendFile(response, request, 'utf8', "/export.csv", true);
+                  });
+
+              fastcsv
+                  .write(jsonData, { headers: true })
+                  .on("finish", function() {
+                      console.log("Write to export.csv successfully!");
+                  })
+                  .pipe(ws);
+          },
+          error => send(response, error),
+      );
+
+      // standard request case, show list view
   } else {
     model.getAll().then(
         notes => {

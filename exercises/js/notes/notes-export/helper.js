@@ -7,12 +7,24 @@ function send(response, responseBody) {
 }
 
 // send all other static files to client
-function sendFile(response, request, encoding = ''){
-    fs.readFile(__dirname + request.url, encoding, function (err, data) {
+function sendFile(response, request, encoding = '', filename = '', download = false){
+    if(filename == '')
+        filename = request.url;
+
+    console.log("send file " + filename);
+
+    fs.readFile(__dirname + filename, encoding, function (err, data) {
         if (err) {
+            console.log(err);
             response.statusCode = 404;
             response.end();
         } else {
+
+            // write different header information for force download file at requesting e.g. export
+            if(download){
+                response.writeHead(200, {'Content-disposition': 'attachment; filename=export.csv'}); // to specify filename for download
+            }
+
             response.end(data);
         }
     });
