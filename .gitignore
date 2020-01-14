@@ -1,4 +1,5 @@
 .idea/
 node_modules/
 /exercises/php/inc/config.php
-
+/exercises/js/notes/notes-export/export.csv
+/exercises/js/notes/notes-export/export.pdf
