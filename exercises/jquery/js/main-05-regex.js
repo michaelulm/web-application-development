@@ -6,6 +6,7 @@ let regexWebsite = new RegExp('^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:
 function validateInputField( $, element, regex ){
     console.log($(element).val());
     console.log( regex.test($(element).val()) );
+
     if(regex.test($(element).val())){
         console.log("valid");
         $(".error", $(element).parent()).fadeOut();
