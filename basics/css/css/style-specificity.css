@@ -1,0 +1,29 @@
+body{
+    background: #88dd00;
+}
+
+/* specific for header heading h1 (DIRECT parent-child-tree)*/
+body > header > h1{
+    color:yellow;
+    text-decoration: underline;
+}
+
+/* general for ALL headings h1 */
+h1{
+    color:blue;
+}
+
+/* ANY h1 child-element 'below' body */
+body h1{
+    color:white;
+}
+
+/* DIRECT h1 child-element of body */
+body > h1{
+    color:red;
+}
+
+/* only span tag with class highlight */
+span.highlight{
+    color: white;
+}

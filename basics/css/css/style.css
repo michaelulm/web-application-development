@@ -1,0 +1,7 @@
+/* imported style from fonts.google.com https://fonts.google.com/specimen/Roboto?sidebar.open=true&selection.family=Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif; /* first load Roboto, if it's not possible so the second font will be loaded */
+    background: #88dd00;
+}

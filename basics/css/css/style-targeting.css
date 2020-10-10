@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #88dd00;
+}
+
+body > header > h1{
+    color:yellow;
+    text-decoration: underline;
+}
+
+body h1{
+    color:white;
+}
+
+#main-header{
+    /* order matters */
+    border: 2px solid black;
+    border-top:none;
+    border-left:none;
+
+    /* defines space around element */
+    margin: 10px 20px;
+}
+
+main{
+    /* clears float of horizontal nav bar */
+    clear:both;
+}
+
+article{
+    max-width: calc(32% - 10px);
+    min-width: 200px;
+    min-height: 400px;
+    display: inline-block;
+    border: 3px solid black;
+    float:left;
+    margin: 10px;
+}
+
+
+/* horizontal nav bar */
+nav {
+    height:25px;
+}
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li {
+    float: left;
+}
+
+nav > ul > li a {
+    display: block;
+    width: 150px;
+    /* spaces */
+    padding:5px;
+    margin:2px;
+    /* color and decoration */
+    color:black;
+    background-color:white;
+    border-bottom:2px solid black;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* hover effect */
+nav > ul > li a:hover {
+    color:white;
+    background-color:black;
+}
+
+#main-footer{
+    clear:both;
+}
