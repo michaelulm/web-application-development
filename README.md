@@ -15,6 +15,10 @@ Bachelor program **IT DUAL**:
 
 **Course Modules:**
 
+*WS20 (re-structured)*:
+- [Web Basics](basics)
+
+*WS19*:
 - JavaScript
 - Ajax
 - jQuery

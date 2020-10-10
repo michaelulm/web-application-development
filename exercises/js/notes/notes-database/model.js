@@ -86,7 +86,7 @@ function update(note) {
         });
     });
 }
-// update an existing note
+// remove an existing note
 function remove(id) {
     return new Promise((resolve, reject) => {
         const query = 'DELETE FROM notes WHERE id = ?';
