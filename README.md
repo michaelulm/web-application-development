@@ -17,6 +17,7 @@ Bachelor program **IT DUAL**:
 
 *WS20 (re-structured)*:
 - [Web Basics](basics)
+- JavaScript [First Steps](client-side/js), First Web Interface
 
 *WS19*:
 - JavaScript

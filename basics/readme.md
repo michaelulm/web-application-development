@@ -2,7 +2,7 @@
 # Web Application Development
 ## Web Basics Modul
 
-Content of this Modul will cover, introduce and recap Web Basics.
+Content of this Modul will cover, introduce and recap Web Basics. It's just a summary of important basics and not a complete guide through the course content.
 
 	- HTML
 	- CSS
@@ -34,8 +34,11 @@ helpful learning materials and other tutorials for basics to web engineering
 	- copy `@import ...;` to your stylesheet 
 - How to use [float](https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/float)!
 
+extended resources
+- Comprehensive Guide to [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 **JavaScript (JS)**
-- JS [Cheat Sheet](https://htmlcheatsheet.com/js/)
+- JS [Cheat Sheet](https://htmlcheatsheet.com/js/) (more Details later)
 
 **Tools**
 - w3c [Validator](https://validator.w3.org/)
