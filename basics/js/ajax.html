@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <title>Ajax Simple Text example</title>
-    <script src="js/ajax-basics.js"></script>
+    <title>Ajax Simple Text Example</title>
+    <script src="js/ajax.js" defer></script> <!-- defer -> script is executed when the page has finished parsing -->
     <meta charset="utf-8"/>
 </head>
 <body>
 
-<h1>Ajax Simple Text example</h1>
+<h1>Ajax Simple Text Example</h1>
 
 <button type="button" id="btnAjaxLoad">Load Simple Text</button>
 <p id="demo">Inspect with browser, change to web console and explore asynchronous loading with AJAX</p>
@@ -16,6 +16,7 @@
 <script type="text/javascript">
     // space at body end
     // improve page speed to load javascript at end
+    console.log("page nearly fully loaded");
 </script>
 </body>
 </html>

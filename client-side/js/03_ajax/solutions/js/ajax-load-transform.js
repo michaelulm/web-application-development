@@ -16,21 +16,32 @@ window.addEventListener("load", function(){
         if(this.readyState == 4     // operation is complete
             && this.status == 200   // successful request/response
         ){
-            // directly write response to HTML element
-            document.getElementById("demo").innerHTML = this.responseText;
-
             // replace line breaks with <br> tags
-            var output = this.responseText;
+            var data = this.responseText;
 
-            // // replace until no string founded
-            // do {
-            //     output = output.replace("\n", "<br/>");
-            // }while(output.includes("\n"));
+            // split txt file and get each line
+            var lines = data.split("\n");
 
-            // replace with regex
-            output = output.replace(/\n/g, "<br/>");
+            // https://developer.mozilla.org/de/docs/Web/API/Document/createElement
+            var ul = document.createElement("ul");
+            ul.id = "simple-list";
 
-            document.getElementById("demo").innerHTML = output;
+            for(var key in lines){
+                // create list item and add this child to list
+                var li = document.createElement("li");
+                var content = document.createTextNode(lines[key]);
+                li.appendChild(content);
+                ul.appendChild(li);
+            }
+
+            // error handling, if element not exists
+            try {
+                document.getElementById("simple-list").remove();
+            } catch(e){
+                // currently nothing to do
+            }
+
+            document.getElementById("demo").appendChild(ul);
 
         }
 
@@ -39,7 +50,6 @@ window.addEventListener("load", function(){
             && this.status == 404   // successful request/response
         ){
             document.getElementById("demo").innerHTML = "File Not Found";
-
         }
     }
 
