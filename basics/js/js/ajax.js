@@ -7,8 +7,9 @@ console.log("script is loading");
 window.addEventListener("load", function(){
     console.log("run script after fully loaded");
     // we need a callback function, which will be loaded on "ready state"-changes
-    function ajaxCallback(){
-        console.log(this);
+    function ajaxCallback(e){
+        console.log(this);  // XMLHttpRequest -> inspect Browser - > Developer Tools for more information after click
+        console.log(e);     // Event
         if(this.readyState == 4     // operation is complete
             && this.status == 200   // successful request/response
         ){
@@ -20,6 +21,7 @@ window.addEventListener("load", function(){
 
     // load function to create first AJAX Request
     function loadData(){
+        console.log(this); // what is "this"? -> take a look at the console
         console.log("load Data after click button");
         // init XMLHttpRequest and define resource for asynchronous loading
         var ajaxObject = new XMLHttpRequest();
