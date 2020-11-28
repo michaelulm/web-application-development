@@ -1,0 +1,10 @@
+{
+  "name": "Notes-Example",
+  "version": "1.0.1",
+  "description": "Example to explain Lists, Forms and Logic with JavaScript and Node.js",
+  "main": "index.js",
+  "author": "Michael Ulm",
+  "dependencies": {
+    "formidable": "^1.2.1"
+  }
+}
