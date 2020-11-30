@@ -5,6 +5,7 @@ const http = require('http');
 
 const server = http.createServer(function(request, response) {
     response.writeHead(200, { 'content-type': 'text/plain; charset=utf-8' }); // <<< take care about content type, first try, later change to 'text/html'
+    // response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
 
     // write HTML and ...
     const body = `<!DOCTYPE html>
@@ -15,7 +16,7 @@ const server = http.createServer(function(request, response) {
       </head>
       <body>
         <p>Hello World!</p>
-        <p>Hello Kapfenberg!</p>
+        <p style="color:red;">Hello Kapfenberg!</p>
       </body>
     </html>`;
 

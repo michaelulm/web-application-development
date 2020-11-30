@@ -39,6 +39,16 @@ extended resources
 
 **JavaScript (JS)**
 - JS [Cheat Sheet](https://htmlcheatsheet.com/js/) (more Details later)
+- JS Promises
+    - JavaScript Tutorial, [Ajax Example](https://www.javascripttutorial.net/es6/javascript-promises/) within a promise (!)
+    - Medium Article ["What is a Promise"](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261)
+    - Node.js about [Understanding JS Promises](https://nodejs.dev/learn/understanding-javascript-promises)
+
+**Node.js**
+- First [Guides](https://nodejs.org/en/docs/guides/) for Node.js
+- First [HTTP Server Example](https://nodejs.org/es/docs/guides/anatomy-of-an-http-transaction/)
+- [Event Loop Guide](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+- Medium Article ["Why the Hell would you use Node.js"](https://medium.com/the-node-js-collection/why-the-hell-would-you-use-node-js-4b053b94ab8e)
 
 **Tools**
 - w3c [Validator](https://validator.w3.org/)

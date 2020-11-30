@@ -1,0 +1,9 @@
+{
+  "name": "sample-project",
+  "author": "Michael Ulm <michael.ulm@fh-joanneum.at> (https://www.fh-joanneum.at)",
+  "version": "1.1.0",
+  "description": "first steps with Node.js to understand Browser JS and Node.js Code (Browser vs. Server)",
+  "scripts": {
+    "start": "node server_05_difference-server-client-javascript.js"
+  }
+}

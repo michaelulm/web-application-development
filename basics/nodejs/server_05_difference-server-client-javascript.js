@@ -13,6 +13,7 @@ const increaseCounter = require('./counter');
 const server = http.createServer(function(request, response) {
 
     // increase server Side counter at every Request
+    // TODO: explain why counter will increase by 3 ?
     var counterRequests = increaseCounter();
 
     // read current URL parameters
