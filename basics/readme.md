@@ -49,6 +49,7 @@ extended resources
 - First [HTTP Server Example](https://nodejs.org/es/docs/guides/anatomy-of-an-http-transaction/)
 - [Event Loop Guide](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
 - Medium Article ["Why the Hell would you use Node.js"](https://medium.com/the-node-js-collection/why-the-hell-would-you-use-node-js-4b053b94ab8e)
+- Medium Article ["Phases of the Node JS Event Loop"](https://medium.com/@kunaltandon.kt/process-nexttick-vs-setimmediate-vs-settimeout-explained-wrt-different-event-loop-phases-c0506b12921d) 
 
 **Tools**
 - w3c [Validator](https://validator.w3.org/)
