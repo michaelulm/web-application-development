@@ -5,4 +5,4 @@
   - appointment-database
   
 - JavaScript Validation Example 
- - milestones-javascript
+  - milestones-javascript
