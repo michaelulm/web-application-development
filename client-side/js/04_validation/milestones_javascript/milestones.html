@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validator.js"></script>
+</head>
+
+<body>
+    <form name="milestonesForm" onsubmit="return validateForm()" action="works.html" method="post">
+        <h2>Milestones Formular</h2>
+
+        <div class="row">
+            <label>Project</label>
+            <input type="text" name="project" minlength="3">
+            <div class="error" id="projectErr"></div>
+        </div>
+
+        <div class="row">
+            <label>Task</label>
+            <input type="text" name="task" minlength="3">
+            <div class="error" id="taskErr"></div>
+        </div>
+
+        <div class="row">
+            <label>Responsible person</label>
+            <input type="text" name="person" maxlength="10">
+            <div class="error" id="personErr"></div>
+        </div>
+
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+
+
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>
