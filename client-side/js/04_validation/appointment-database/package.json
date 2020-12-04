@@ -1,0 +1,12 @@
+{
+  "name": "Appointments-Database",
+  "version": "1.0.0",
+  "description": "Example for first Access to Database, use deployment scripts to init database",
+  "author": "Jasmin Koller",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
