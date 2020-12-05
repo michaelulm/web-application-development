@@ -10,7 +10,6 @@ function send(response, responseBody) {
 function sendFile(response, request, encoding = ''){
     fs.readFile(__dirname + request.url, encoding, function (err, data) {
         if (err) {
-            res.sendFile(__dirname + "/404.html")
             response.end();
         } else {
             response.end(data);

@@ -83,12 +83,29 @@ const server = http.createServer((request, response) => {
         notes => {
           send(response, getList(notes));
         },
-        error => send(response, error),
+        error => {
+            // TODO handling different errors
+            // TODO improve error handling by better helper methods
+
+            // ER_NO_SUCH_TABLE
+            if(error.errno == 1146){
+                console.log("handling error")
+                sendFile(response, {url:"/html/db-error-1146.html"}, 'utf8');
+                // keep in mind, that this is only a demonstration for handling different errors
+                // TODO think about useful error handlings, because a missing table should not show to users
+
+            } else {
+                console.log("something else happens");
+                sendFile(response, {url:"/html/500.html"}, 'utf8');
+
+            }
+
+        },
     );
   }
 });
 
 // server is now listening to specific port
 server.listen(8080, () =>
-  console.log('Server and Notes Application is listening to https://localhost:8080'),
+  console.log('Server and Notes Application is listening to http://localhost:8080'),
 );
