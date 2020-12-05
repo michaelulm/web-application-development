@@ -1,5 +1,5 @@
 {
-  "name": "Notes-Example",
+  "name": "Notes-Example with JSON File for storing Data",
   "version": "1.0.1",
   "description": "Example to explain Lists, Forms and Logic with JavaScript and Node.js",
   "main": "index.js",

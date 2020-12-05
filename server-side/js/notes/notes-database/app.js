@@ -72,8 +72,9 @@ const server = http.createServer((request, response) => {
   } else if (parts.includes('images')) {
     sendFile(response, request);
 
-    // ... same for styles
-  } else if (request.url === '/styles/style.css') {
+    // ... same but little bit different for styles
+  } else if (request.url.includes('/styles/')) {
+
     sendFile(response, request, 'utf8');
 
     // standard request case, show list view
