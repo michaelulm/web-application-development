@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Simple HTML5 Form Validation</title>
+    <link rel="stylesheet" href="css/style-validation.css" />
+</head>
+<body>
+
+<h1>Web Application Development</h1>
+<form>
+    <div>
+
+        <label for="username">Choose a username: </label>
+        <input type="text" id="username" name="username" required size="45"
+               pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+        <span class="validity"></span>
+        <p>input uses simple regex to identify length and allowed characters.<br/>
+            [a-z]{4,8}
+            <ul>
+                <li>from a to z</li>
+                <li>minimum of 4 and</li>
+                <li>maximum of 8</li>
+            </ul>
+        </p>
+        <p>Usernames must be lowercase and 4-8 characters in length.</p>
+
+        <label for="useremail">Choose a E-Mail: </label>
+        <input type="email" id="useremail" name="useremail" required size="45"
+                title="use your email address">
+        <span class="validity"></span>
+        <p>input uses input type for validation, in this case NOT pattern attribute</p>
+        <p>E-Mail like "yourname@domain.com" .</p>
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+</form>
+
+<p>feel free to bring in your extensions to this example!</p>
+<p>more details take a look at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern">developer.mozilla.org</a></p>
+</body>
+</html>
