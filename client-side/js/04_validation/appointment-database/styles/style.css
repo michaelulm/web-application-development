@@ -11,31 +11,3 @@ textarea {
   border: 1px solid #333;
   box-sizing: border-box;
 }
-
-input:required:valid{
-  border-color: green;
-}
-
-input:invalid{
-  border-color: red;
-}
-
-input:required:focus:valid{
-  background: lightgreen;
-  background-size: auto;
-}
-
-input:focus:invalid{
-  background: lightpink;
-  background-size: auto;
-}
-
-textarea:focus:invalid{
-  background: lightpink;
-  background-size: auto;
-}
-
-textarea:required:focus:valid{
-  background: lightgreen;
-  background-size: auto;
-}
