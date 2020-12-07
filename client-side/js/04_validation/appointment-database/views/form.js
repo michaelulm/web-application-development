@@ -13,10 +13,6 @@ function getForm(milestone) {
   // define different header(s)
   let milestoneHeader = "Add new milestone";
 
-  // check if milestone alredy exists and fill milestone object
-  if (milestone.id) {
-    milestoneHeader = "Edit note";
-  }
 
   // build form within javascript
   const form = `<!DOCTYPE html>
