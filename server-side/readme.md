@@ -21,3 +21,4 @@ example of winter term 2019 with JSON Data Storage and MySQL Database Integratio
 
 - Build an [HTTP Server](https://nodejs.dev/learn/build-an-http-server) with Node.js
 - Quick [List](https://stackoverflow.com/questions/25146687/list-of-node-js-http-status-codes) of HTTP Status Codes
+- Node.js and [SSL Integration](https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/)
