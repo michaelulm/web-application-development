@@ -122,7 +122,7 @@ function send(response, responseBody) {
 }
 
 server.listen(8080, () =>
-  console.log('Server and Notes Application is listening to https://localhost:8080'),
+  console.log('Server and Notes Application is listening to http://localhost:8080'),
 );
 
 // redirecting to 'to'-location
