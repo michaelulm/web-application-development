@@ -1,0 +1,49 @@
+td{
+  padding: 2px;
+}
+tr:nth-child(even) td {
+  background-color: lightgrey;
+}
+
+input,
+textarea {
+  width : 30%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+input:required:valid{
+  border-color: green;
+}
+
+input:invalid{
+  border-color: red;
+}
+
+input:required:focus:valid{
+  background: lightgreen;
+  background-size: auto;
+}
+
+input:focus:invalid{
+  background: lightpink;
+  background-size: auto;
+}
+
+textarea:focus:invalid{
+  background: lightpink;
+  background-size: auto;
+}
+
+textarea:required:focus:valid{
+  background: lightgreen;
+  background-size: auto;
+}
+
+textarea:invalid{
+  border-color: red;
+}
+
+textarea:required:valid{
+  border-color: green;
+}
