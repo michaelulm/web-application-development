@@ -70,6 +70,6 @@ const server = http.createServer((request, response) => {
 // server is now listening to specific port
 server.listen(8080, () =>
   console.log(
-    "Server and Notes Application is listening to https://localhost:8080"
+    "Server and Notes Application is listening to http://localhost:8080"
   )
 );
