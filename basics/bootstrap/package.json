@@ -1,0 +1,10 @@
+{
+  "name": "Bootstrap_Simple_Example",
+  "version": "1.0.0",
+  "description": "Example to simple show Bootstrap integration",
+  "author": "Michael Ulm",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1"
+  }
+}
