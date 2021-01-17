@@ -1,0 +1,9 @@
+{
+  "name": "jQuery_Simple_Example",
+  "version": "1.0.0",
+  "description": "Example to simple show jQuery integration",
+  "author": "Michael Ulm",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
