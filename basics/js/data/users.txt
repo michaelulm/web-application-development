@@ -1,0 +1,2 @@
+[{"name":"John", "age":30, "hometown":"Kapfenberg"},
+{"name":"Jack", "age":42, "hometown":"Graz"}]
