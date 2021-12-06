@@ -25,6 +25,7 @@ function getList(tasks){
                         </tr>
                     </tbody>
                 </table>
+                <a href="/new">add new Task</a>
             </body>
         </html>
     `;
