@@ -1,5 +1,5 @@
 // TODO create Form for new AND edit task item
-function getForm(){
+function getForm(tasks, id){
 
     const form = `
         <html>
@@ -14,6 +14,8 @@ function getForm(){
                         <input type="text" id="id" name="id" value=""/>
                     </div>    
                 </form>
+                
+                <a href="/">back</a>
             </body>
         </html>
     `;
