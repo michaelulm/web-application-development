@@ -7,6 +7,8 @@ const deleteTask = require("./delete"); // loads exported function from delete.j
 
 // load form for new and edit task
 const getForm = require("./form");
+// load list overview for first page
+const getList = require('./list');
 
 // example data, array of task (json) objects
 let tasks = require("./data");
@@ -24,21 +26,7 @@ const server = http.createServer((request, response) => {
     } else if(parts.includes('new')){
         send(response, getForm()); // new task will not need any id -> this will be added dynamically
     } else {
-
-        // creating overview list
-        let responseOverview = "";
-
-        // iterate over all tasks
-        tasks.forEach(task => {
-            // add each task to responseBody
-            responseOverview += task.title +
-                " <a href='/delete/" + task.id + "'>delete</a> | " +
-                " <a href='/edit/" + task.id + "'>edit</a> <br/> \n"
-            ;
-        });
-
-        responseOverview += "<a href='/new'>new Task</a>";
-        send(response, responseOverview);
+        send(response, getList(tasks));
     }
 
 });
