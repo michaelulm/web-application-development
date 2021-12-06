@@ -17,6 +17,7 @@ const server = http.createServer((request, response) => {
     const parts = request.url.split("/"); // e.g. localhost:8080/delete/42
     if(parts.includes('delete')){
        tasks = deleteTask(tasks, parts[2]);
+       redirect(response, "/");
     } else if(parts.includes('edit')){
         // TODO how to handle wrong requests, e.g. missing data
         send(response, getForm(tasks, parts[2])); // e.g. localhost:8080/edit/42
@@ -39,6 +40,7 @@ const server = http.createServer((request, response) => {
         responseOverview += "<a href='/new'>new Task</a>";
         send(response, responseOverview);
     }
+
 });
 
 // "start" server
@@ -52,4 +54,9 @@ function send(response, responseBody){
     response.writeHead(200, {'content-type': 'text/html'});
     // we need to send end of response -> otherwise endless loading
     response.end(responseBody);
+}
+
+function redirect(response, to){
+    response.writeHead(302, {location: to, 'content-type': 'text/plain'});
+    response.end('302 Redirect to ' + to);
 }

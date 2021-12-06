@@ -1,9 +1,9 @@
 // TODO create Form for new AND edit task item
 function getForm(tasks, id){
 
-    console.log("getForm() entry point");
-    console.log(tasks);
-    console.log(id);
+    // console.log("getForm() entry point");
+    // console.log(tasks);
+    // console.log(id);
 
     // initialise task object -> needed for use case "add new task"
     let task = {
