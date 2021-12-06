@@ -1,0 +1,13 @@
+{
+  "name": "Tasks-Example with MySQL Database Integration",
+  "version": "1.0.0",
+  "description": "Example to explain Lists, Forms and Logic with JavaScript and Node.js",
+  "main": "app.js",
+  "author": "Michael Ulm",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
