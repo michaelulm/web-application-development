@@ -1,5 +1,8 @@
-// TODO create Form for new AND edit task item
 function getForm(tasks, id){
+
+    // console outputs only needed for demonstration purpose,
+    // to identify values through runtime -> use debug at development
+    // could also be used within testing scenarios
 
     // console.log("getForm() entry point");
     // console.log(tasks);
@@ -12,6 +15,7 @@ function getForm(tasks, id){
         description : ''
     }
 
+    // if id is undefined it's not true
     if(id){
         task = tasks.find(task => task.id === parseInt(id, 10));
     }

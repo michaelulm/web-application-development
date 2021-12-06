@@ -1,3 +1,4 @@
+// in-memory data for demonstration
 const data = [
     {id: 1, title: "User Story 1", description: "List Overview"},
     {id: 2, title: "User Story 2", description: "Search"},
