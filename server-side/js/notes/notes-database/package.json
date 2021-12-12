@@ -6,7 +6,8 @@
   "author": "Michael Ulm",
   "dependencies": {
     "formidable": "^1.2.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "package.json": "^2.0.1"
   },
   "scripts": {
     "start": "node app.js"

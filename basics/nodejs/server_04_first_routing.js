@@ -1,5 +1,7 @@
 const http = require('http');
 const url = require('url');
+const port = 8080;
+let address = "http://localhost:" + port;
 
 // start node with this command
 // $ node server_04_first_routing.js
@@ -44,5 +46,7 @@ const server = http.createServer(function(request, response) {
 });
 
 server.listen(8080, function() {
-    console.log('Server is listening to http://localhost:8080/edit');
+    console.log('Server is listening to ' + address);
+    console.log('Open ' + address + '/edit for first routing');
+    console.log('Open ' + address + '/new to try another route');
 });

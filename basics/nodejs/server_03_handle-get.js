@@ -1,4 +1,6 @@
 const http = require('http');
+const port = 8080;
+let address = "http://localhost:" + port;
 
 // add require definition to work with url module and store to constant url
 const url = require('url');
@@ -29,5 +31,6 @@ const server = http.createServer(function(request, response) {
 });
 
 server.listen(8080, function() {
-    console.log('Server is listening to http://localhost:8080/?name=Michael%20Ulm');
+    console.log('Server is listening to ' + address);
+    console.log('Open ' + address + '/?name=Michael%20Ulm');
 });

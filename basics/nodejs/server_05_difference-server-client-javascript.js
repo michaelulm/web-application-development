@@ -1,6 +1,8 @@
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
+const port = 8080;
+let address = "http://localhost:" + port;
 
 // start node with this command
 // $ node server_05_difference-server-client-javascript.js

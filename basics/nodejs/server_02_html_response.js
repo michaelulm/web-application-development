@@ -1,4 +1,6 @@
 const http = require('http');
+const port = 8080;
+let address = "http://localhost:" + port;
 
 // start node with this command
 // $ node server_02_html_response.js
@@ -25,5 +27,5 @@ const server = http.createServer(function(request, response) {
 });
 
 server.listen(8080, function() {
-    console.log('Server is listening to http://localhost:8080');
+    console.log('Server is listening to ' + address);
 });
