@@ -9,8 +9,8 @@ Bachelor program **IT DUAL**:
 - [Mobile Software Development](https://www.fh-joanneum.at/msd) (FH JOANNEUM)
 
 **Contributors, Lecturers and Tutors**
-- [Michael Ulm](https://github.com/michaelulm "Michael Ulm")
-- [Jasmin Koller](https://github.com/...TODO "Jasmin Koller")
+- Michael Ulm [FH JOANNEUM](https://www.fh-joanneum.at/hochschule/person/michael-ulm/ "Michael Ulm") | [Git](https://github.com/michaelulm "Michael Ulm")
+- Jasmin Koller [FH JOANNEUM](https://www.fh-joanneum.at/hochschule/person/jasmin-koller/ "Jasmin Koller")
 
 **Course:**
 
@@ -19,14 +19,24 @@ Bachelor program **IT DUAL**:
 
 **Course Modules:**
 
+*WS21 (partly re-structured)*
+- [Web Basics](basics), HTML & CSS & Introduction to JS
+- JavaScript [First Steps](client-side/js), First Web Interface
+- JavaScript [AJAX](client-side/js/03_ajax), Asynchronous Request and Response Handling
+- JavaScript Event Handling
+- Node.js [First Steps](basics/nodejs), Application Server
+- Node.js [Tasks Example](server-side/js/tasks)
+- Node.js [Database](server-side/js/tasks)
+
+
 *WS20 (re-structured)*:
 - [Web Basics](basics), HTML & CSS & Introduction to JS
 - JavaScript [First Steps](client-side/js), First Web Interface
 - JavaScript [AJAX](client-side/js/03_ajax), Asynchronous Request and Response Handling
 - JavaScript Event Handling, Different Examples by Students
 - Node.js [First Steps](basics/nodejs), Application Server
-- Node.js [Notes Exampe](server-side/js/notes), **v1** with _in-memory_ usage, and **v2** with _JSON File_ Integration
-- Node.js [Database TODO](server-side/js/appointments), Database Example with Appointments / Milestones
+- Node.js [Notes Example](server-side/js/notes), **v1** with _in-memory_ usage, and **v2** with _JSON File_ Integration
+- Node.js [Database](server-side/js/appointments), Database Example with Appointments / Milestones
 
 
 *WS19*:
@@ -48,10 +58,6 @@ additional [exercises and examples](exercises) are integrated in the "old struct
 - Some Exercises based on following Lecturers and their courses: Manfred Pamsl
 
 **Download and useful Links:**
-
-Setup and Installation
-
-- 
 
 Java Script
 

@@ -48,6 +48,6 @@ button.addEventListener("click", () => {
 
     // list of users
     xhr.open("GET", "data/users.txt", true);
-    
+
     xhr.send();
 });

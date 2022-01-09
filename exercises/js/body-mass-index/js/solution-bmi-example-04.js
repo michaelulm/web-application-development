@@ -18,7 +18,10 @@ window.addEventListener("load", function(){
 
         // calculate BMI -> copied from previous examples
         var h = height / 100;
+        h = height;
+        console.log(h);
         var bmi = weight / (h * h);
+        console.log(bmi);
 
         document.getElementById("results").innerHTML = "Your BMI is " + bmi;
     });

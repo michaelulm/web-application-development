@@ -5,5 +5,8 @@
   "description": "first steps with Node.js to understand Browser JS and Node.js Code (Browser vs. Server)",
   "scripts": {
     "start": "node server_05_difference-server-client-javascript.js"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
   }
 }
