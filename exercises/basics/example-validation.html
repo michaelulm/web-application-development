@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
     <title>Simple HTML5 Form Validation</title>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" href="css/style-validation.css" />
 </head>
 <body>
@@ -12,7 +13,7 @@
 
         <label for="username">Choose a username: </label>
         <input type="text" id="username" name="username" required size="45"
-               pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+               "pattern="[a-z]{4,8} title="4 to 8 lowercase letters">
         <span class="validity"></span>
         <p>input uses simple regex to identify length and allowed characters.<br/>
             [a-z]{4,8}

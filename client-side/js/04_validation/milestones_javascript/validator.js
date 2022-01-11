@@ -10,6 +10,7 @@ function validateForm() {
   var email = document.milestonesForm.email.value;
   var person = document.milestonesForm.person.value;
   var task = document.milestonesForm.task.value;
+  var duedate = document.milestonesForm.duedate.value;
 
   // Defining error variables with a default value
   var projectErr = (emailErr = personErr = true);
@@ -75,23 +76,33 @@ function validateForm() {
     }
   }
 
+  // Validate future due date
+  if (duedate == "") {
+    printError("duedateErr", "Please enter a due date");
+  } else {
+    duedate = document.milestonesForm.duedate.valueAsDate;
+    today = new Date();
+    // proof date is in future
+    if (duedate < today) {
+      printError("duedateErr", "Please enter a date in the future");
+    } else {
+      printError("duedateErr", "");
+      duedateErr = false;
+    }
+  }
+
   // Prevent the form from being submitted if there are any errors
-  if ((projectErr || emailErr || personErr || taskErr) == true) {
+  if ((projectErr || emailErr || personErr || taskErr || duedateErr) == true) {
     return false;
   } else {
     // Creating a string from input data for preview
     var dataPreview =
       "You've entered the following details: \n" +
-      "Projectname: " +
-      project +
-      "\n" +
-      "Task: " +
-      task +
-      "\n" +
-      "Responsible person: " +
-      person +
-      "\n";
-    "Email Address: " + email + "\n";
+      "Projectname: " + project + "\n" +
+      "Task: " + task + "\n" +
+      "due date: " + duedate + "\n" +
+      "Responsible person: " + person + "\n" +
+      "Email Address: " + email + "\n";
     // Display input data in a dialog box before submitting the form
     alert(dataPreview);
   }
