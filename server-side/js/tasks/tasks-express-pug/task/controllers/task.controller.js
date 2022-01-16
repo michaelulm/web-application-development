@@ -1,21 +1,20 @@
 const model = require("../models/task.model");
-const viewTaskList = require("../views/taskList");
-const viewTaskForm = require("../views/taskForm");
+
+// TODO integrate Database access to a complete example
 
 function listAction(request, response) {
     const data = model.getAll();
-    const view = viewTaskList(request, data);
-    response.send(view);
+    // take care about data object, this will be only matched within pug template if name is matching => "data"
+    response.render("task-list", { data });
 }
 
 function formAction(request, response){
     let task = {id: "", title: "", description: ""};
-    if(request.params.id){
+    if(parseInt(request.params.id, 10) > 0){
         task = model.get(parseInt(request.params.id, 10));
     }
-    console.log(task);
-    const view = viewTaskForm(task);
-    response.send(view);
+    // take care about data object, this will be only matched within pug template if name is matching => "task"
+    response.render("task-form", { task });
 }
 
 function deleteAction(request, response) {

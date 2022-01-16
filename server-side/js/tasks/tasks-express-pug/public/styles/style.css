@@ -15,3 +15,9 @@ img.icon:hover {
   height: 22px;
   margin: 2px;
 }
+
+header, footer {
+  text-align: center;
+  font-style: italic;
+  color:lightgrey;
+}

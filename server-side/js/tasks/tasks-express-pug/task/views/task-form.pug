@@ -1,0 +1,14 @@
+extends ../../views/base
+
+block content
+
+    form(action="/task/save", method="POST")
+        input(type="hidden", name="id", id="id", value=task.id)
+        div
+            | title:
+            input(type="text", name="title", id="title", value=task.title)
+        div
+            | description:
+            input(type="text", name="description", id="description", value=task.description)
+
+        input(type='submit', value='save')

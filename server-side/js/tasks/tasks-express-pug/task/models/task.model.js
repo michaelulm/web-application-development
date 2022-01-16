@@ -7,7 +7,6 @@ const data = [
     {id: 5, title: "User Story 5", description: "Add new Data"}
 ];
 
-
 function deleteTask(tasks, id ){
     const index = tasks.findIndex(task => task.id === parseInt(id, 10));
     if(index > -1){
@@ -40,7 +39,6 @@ module.exports = {
         return data;
     },
     get(id){
-        console.log("get()")
         return data.find(task => task.id === id);
     },
     delete(id){

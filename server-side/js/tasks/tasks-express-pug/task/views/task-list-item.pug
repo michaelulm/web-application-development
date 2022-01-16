@@ -1,0 +1,12 @@
+mixin listItem(task)
+    tr
+        td #{task.id}
+        td #{task.title}
+        td #{task.description}
+        td
+            a(href="/task/delete/" + task.id) delete
+                img(src="/images/delete.png" class="icon" alt="delete within link")
+            img(src="/images/delete.png" class="icon" alt="delete outside link")
+        td
+            a(href="/task/" + task.id) edit
+                img(src="/images/edit.png" class="icon" alt="edit")
