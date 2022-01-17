@@ -3,7 +3,6 @@
 // const http = require("http"); // DEPRECATED -> replaced by express
 // we will keep old reference to http and server to show differences
 const express = require("express");
-const bodyParser = require("body-parser");
 
 // load other nodejs module for easy parsing http request to receive object
 // const querystring = require("querystring"); // https://nodejs.org/api/querystring.html

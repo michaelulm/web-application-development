@@ -26,3 +26,8 @@ Server is listening to port 8080 and will handle any request
 5. Server will send response to client
 6. Client will receive response, e.g. HTML 
 
+## Extended Version of tasks-express
+this is a extended version of [tasks-express](../tasks-express) with
+
+- database access
+- pug template engine

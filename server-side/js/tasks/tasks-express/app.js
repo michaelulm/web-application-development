@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const port = 8080;
 
 // load own created modules, to delete or save single task
@@ -16,7 +15,7 @@ let tasks = require("./data");
 // initialise express server
 const app = express();
 //Parse URL-encoded bodies
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 
 // easy bind get or post requests with matching url path including variable e.g. id
 // for multiple entities it's recommended e.g. use /task/delete/:id instead of root /delete/:id
